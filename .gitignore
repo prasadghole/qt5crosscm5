@@ -1,2 +1,6 @@
 build/
 buildpi/
+build build_native build_pi buildpi
+build/ build_native/ build_pi/ buildpi/
+build_native/
+build_pi/
