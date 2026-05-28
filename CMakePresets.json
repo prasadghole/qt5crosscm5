@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "pi",
+      "displayName": "Cross-compile for Raspberry Pi (aarch64)",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build-aarch64",
+      "toolchainFile": "${sourceDir}/pi_toolchain.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "native",
+      "displayName": "Host x86_64 (native Qt5)",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build-host",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_PREFIX_PATH": "/usr/lib/x86_64-linux-gnu/cmake/Qt5"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "pi",
+      "configurePreset": "pi"
+    },
+    {
+      "name": "native",
+      "configurePreset": "native"
+    }
+  ]
+}
