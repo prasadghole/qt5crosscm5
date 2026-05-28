@@ -1,6 +1,15 @@
-build/
-buildpi/
-build build_native build_pi buildpi
-build/ build_native/ build_pi/ buildpi/
-build_native/
-build_pi/
+# CMake build directories
+/build/
+/build_native/
+/build_pi/
+/buildpi/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile.user
+
+# Qt Creator local settings
+*.user
+*.user.*
