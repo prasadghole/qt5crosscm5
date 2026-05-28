@@ -20,4 +20,4 @@ add_executable(RemoteQtApp
 
 target_link_libraries(RemoteQtApp Qt5::Widgets)
 
-target_link_libraries(RemoteQtApp Qt5::Widgets)
+install(TARGETS RemoteQtApp RUNTIME DESTINATION bin)
